@@ -29,6 +29,19 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 
 // Area Chart Example
 var ctx = document.getElementById("myAreaChart");
+var data_money = []; 
+var data_date = [];
+$.post("<?= base_url('admin/getData') ?>", 
+function (data) {
+  var obj = JSON.parse(data); 
+  $.each(obj, function (test, item) {
+    data_money.push(item.money); 
+    data_date.push(item.date);
+  })
+})
+
+console.log(data_date);
+
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {

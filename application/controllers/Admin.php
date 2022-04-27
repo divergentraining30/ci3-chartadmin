@@ -5,6 +5,16 @@ class Admin extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('admin/admin');
+        $data['title'] = "Test Chart";
+		$this->load->view('admin/admin', $data, FALSE);
 	}
+
+    public function getData()
+    {
+        $this->load->model('Query'); 
+        $data = $this->Query->getProfit(); 
+        echo json_encode($data); 
+        // print_r($cek); 
+        // exit();
+    }
 }

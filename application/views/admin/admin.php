@@ -46,7 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="#"> <!-- index.html -->
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -294,7 +294,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
+                                        <img class="rounded-circle" src="<?php echo base_url().'assets/img/undraw_profile_3.svg'?>"
                                             alt="...">
                                         <div class="status-indicator bg-warning"></div>
                                     </div>
